@@ -11,9 +11,18 @@
 }
 
 .menu ul {
+  font-size: medium;
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.menu ul li {
 }
 
 .menu a {
