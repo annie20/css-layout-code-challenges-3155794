@@ -9,7 +9,9 @@
 }
 
 .block {
-  
+  box-sizing: border-box;
+  flex: 1 0 20ch;
+  /* width: clamp(180px, 33%, calc((100% - 2rem)/3)); */
   padding: 0 1rem;
   border: 0.5rem solid green;
 }
