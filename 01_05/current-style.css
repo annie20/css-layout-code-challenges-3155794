@@ -13,8 +13,7 @@ img {
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .image img {
@@ -24,8 +23,5 @@ img {
 
 .cover {
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  place-self: center;
 }
