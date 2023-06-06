@@ -23,14 +23,13 @@ img {
 }
 
 .main {
-  margin-right: auto;
-  margin-left: auto;
-  padding: 2rem;
-  max-width: calc(var(--content-width) - 4rem);
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, var(--content-width)) 1fr;
 }
 
 main > * {
   padding: 2rem;
+  grid-column: 2;
 }
 
 .highlight {
@@ -38,6 +37,28 @@ main > * {
 }
 
 .full-width {
- 
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: inherit;
 }
 
+.full-width > * {
+  grid-column: 2;
+  padding: 0 2rem;
+}
+
+figure.full-width {
+  padding: 0;
+}
+
+figure.full-width > img {
+  grid-column: 1/-1;
+  padding: 0;
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.zachary {
+  font-family: 'Courier New', Courier, monospace;
+}
