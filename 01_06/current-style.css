@@ -1,4 +1,5 @@
 body {
+  box-sizing: border-box;
   margin: 1rem;
   display: flex;
   flex-direction: column;
@@ -46,15 +47,18 @@ body > * {
 
 @media screen and (min-width: 100ch) {
   body {
-
+    display: grid;
+    grid-template-columns: 1fr minmax(10ch, 25%);
+    grid-template-rows: auto auto 1fr auto;
+    
   }
 
   .header {
-    
+    grid-column: 1/-1;
   }
 
   .navbar {
-    
+    grid-column: 1/-1;
   }
   
   .main {
@@ -62,25 +66,27 @@ body > * {
   }
 
   .sidebar {
-
   }
 
   .footer {
-
+    grid-column: 1/-1;
   }
 }
 
 @media screen and (min-width: 140ch) {
   body {
-
+    display: grid;
+    grid-template-columns: minmax(10ch, 20%) 1fr minmax(10ch, 20%);
+    grid-template-rows: auto 1fr auto;
+    
   }
 
   .navbar {
-    
+    grid-column: span 1;
   }
 
   .navbar ul {
-    
+    flex-direction: column;
   }
 
   .main {
